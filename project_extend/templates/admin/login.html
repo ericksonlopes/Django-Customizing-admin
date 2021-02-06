@@ -1,0 +1,77 @@
+<!--Extende o template do django admin para sofrer as modificações a baixo-->
+{% extends "admin/login.html" %}
+
+{% load static %}
+
+<!--Titulo da pagina-->
+{% block title %}
+    Inspecto Agri | Acessar Conta
+{% endblock %}
+
+
+<!-- top nav do bloco principal-->
+{% block branding %}
+    <h1 id="site-name">
+        <a href="/admin/" class="text-center">Login do usuário</a>
+    </h1>
+{% endblock %}
+
+
+<!-- Bloco principal-->
+{% block content %}
+
+<div class="text-center ">
+	<a href="https://www.linkedin.com/in/ericksonlopesdev/"><span><i class="feather-16" data-feather="arrow-left"></i>Voltar ao site principal</span></a>
+</div>
+<hr>
+<!-- Se caso acontecer algum erro no login exibe a mensagem-->
+{% if form.errors %}
+<p class="text-center alert alert-danger">Verifique se o nome ou senha do usuário está correta!</p>
+{% endif %}
+<!--    Importa os arquvios estaticos-->
+    {% include 'layout.html' %}
+
+<!-- Conteudo do bloco principal-->
+
+    <div class="card-block mt-4">
+		<div class="text-center">
+			<i data-feather="user" class="feather-50 text-green"></i>
+		</div>
+		<h4 class="text-center text-uppercase mt-4"><strong>Nome Da Empresa</strong></h4>
+		<h5 class="text-center text-secondary"><small><strong><span>Bem vindo de volta!</span></strong></small></h5>
+
+		<form action="" class="p-4" method="post">
+			{% csrf_token %}
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Usuário" id="username" name="username">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="Senha" id="password"
+			   name="password">
+			</div>
+
+			<button type="submit" class="mt-4 btn btn-block btn-md btn-primary"><span>Acessar <i class="feather-16" data-feather="chevron-right"></i></span></button>
+
+			<div class="mt-3 text-center">
+				<a href="#"><span> esqueci a minha senha</span></a>
+			</div>
+		</form>
+
+		<hr>
+
+		<p class="pl-4 pr-4 text-center">Para dúvidas, utilize um dos nossos canais abaixo:</p>
+		<ul class="text-center list-unstyled text-secondary">
+			<li><strong>E-mail:</strong> comercial@empresa.com.br</li>
+			<li><strong>Telefone:</strong> +55 00 0000-0000</li>
+			<li><strong>WhatsApp:</strong> +55 00 0000-0000</li>
+		</ul>
+	</div>
+
+<!--	Exibe o icone svg-->
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script>
+		jQuery(($) => {
+			feather.replace()
+		});
+	</script>
+{% endblock %}
