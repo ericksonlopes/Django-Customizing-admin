@@ -4,7 +4,7 @@
 <p>Crie uma pasta chamada 'admin' dentro de templates, por padrão o django buscara lá </p>
 
 ```
-Projeto
+project_extend
 ├── static
 └── templates
 |   ├── admin
