@@ -1,38 +1,43 @@
 <!--Extende o template do django admin para sofrer as modificações a baixo-->
 {% extends "admin/login.html" %}
 
-{% load static %}
-
 <!--Titulo da pagina-->
 {% block title %}
-    Inspecto Agri | Acessar Conta
+    Acessar Conta | Login
 {% endblock %}
 
 
 <!-- top nav do bloco principal-->
 {% block branding %}
-    <h1 id="site-name">
-        <a href="/admin/" class="text-center">Login do usuário</a>
-    </h1>
-{% endblock %}
+	<div id="branding">
 
+	</div>
+{% endblock %}
 
 <!-- Bloco principal-->
 {% block content %}
 
-<div class="text-center ">
-	<a href="https://www.linkedin.com/in/ericksonlopesdev/"><span><i class="feather-16" data-feather="arrow-left"></i>Voltar ao site principal</span></a>
-</div>
-<hr>
-<!-- Se caso acontecer algum erro no login exibe a mensagem-->
-{% if form.errors %}
-<p class="text-center alert alert-danger">Verifique se o nome ou senha do usuário está correta!</p>
-{% endif %}
-<!--    Importa os arquvios estaticos-->
-    {% include 'layout.html' %}
+	<!--Importa os arquvios estaticos-->
+    {% include 'index.html' %}
 
-<!-- Conteudo do bloco principal-->
+	<!-- Primeiro link do bloco-->
+	<div class="text-center">
+		<a href="https://www.linkedin.com/in/ericksonlopesdev/">
+			<span>
+				<i class="feather-16" data-feather="arrow-left"></i>Voltar ao site principal
+			</span>
+		</a>
+		<hr>
+	</div>
 
+	<!-- Se caso acontecer algum erro no login exibe a mensagem-->
+	{% if form.errors %}
+	<p class="text-center alert alert-danger">Verifique se o nome ou senha do usuário está correta!</p>
+	{% endif %}
+
+
+
+	<!-- Conteudo do bloco principal / form-->
     <div class="card-block mt-4">
 		<div class="text-center">
 			<i data-feather="user" class="feather-50 text-green"></i>
@@ -67,11 +72,13 @@
 		</ul>
 	</div>
 
-<!--	Exibe o icone svg-->
+
+	<!--Exibe o icone svg-->
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	<script>
 		jQuery(($) => {
 			feather.replace()
 		});
 	</script>
+
 {% endblock %}
