@@ -1,4 +1,4 @@
-<!--Extende o template do django admin para sofrer as modificações a baixo-->
+<!--Estende o template do django admin para sofrer as modificações a baixo-->
 {% extends "admin/login.html" %}
 
 <!--Titulo da pagina-->
@@ -6,11 +6,10 @@
     Acessar Conta | Login
 {% endblock %}
 
-
 <!-- top nav do bloco principal-->
 {% block branding %}
 	<div id="branding">
-
+		<!--Deixar vazio-->
 	</div>
 {% endblock %}
 
@@ -34,8 +33,6 @@
 	{% if form.errors %}
 	<p class="text-center alert alert-danger">Verifique se o nome ou senha do usuário está correta!</p>
 	{% endif %}
-
-
 
 	<!-- Conteudo do bloco principal / form-->
     <div class="card-block mt-4">
@@ -71,7 +68,6 @@
 			<li><strong>WhatsApp:</strong> +55 00 0000-0000</li>
 		</ul>
 	</div>
-
 
 	<!--Exibe o icone svg-->
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
