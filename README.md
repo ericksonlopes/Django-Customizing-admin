@@ -15,12 +15,14 @@ Projeto
 
 ## Como alterar ?
 <p>Dentro do arquivo 'login.html', vamos especificar ao sistema qual template estamos querendo modificar</p>
+
 ```
 <!--Estende o template do django admin para sofrer as modificações a baixo-->
 {% extends "admin/login.html" %}
 ```
 
 <p>Agora só precisamos passar o id ou dependendo a tag</p>
+
 ```
 <!--Titulo da pagina-->
 {% block title %}
