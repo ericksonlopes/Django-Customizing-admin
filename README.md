@@ -1,11 +1,13 @@
 # Django-Customizing-admin
 
 
-"""
-Harry
-├── Bill
-└── Jane
-    ├── Diane
-    │   └── Mary
-    └── Mark
-"""
+```
+Projeto
+├── static
+└── templates
+|   ├── admin
+|   │   └── login.html
+|   └── index.html
+└── manage.py
+```
+
