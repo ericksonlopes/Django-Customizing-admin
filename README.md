@@ -1,7 +1,7 @@
 # Customizando Login do Admin - Django
 
 ## Ordem em que pastas e arquivos devem ficar !
-<p> > Crie uma pasta chamada 'admin' dentro de templates, por padrão o django buscara lá </p>
+<p>Crie uma pasta chamada 'admin' dentro de templates, por padrão o django buscara lá </p>
 
 ```
 Projeto
