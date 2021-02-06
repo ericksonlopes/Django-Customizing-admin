@@ -2,6 +2,7 @@
 
 
 <p>Crie uma uma pasta chamada 'admin' dentro de templates, por padrão o django buscara lá </p>
+
 ```
 Projeto
 ├── static
@@ -10,5 +11,6 @@ Projeto
 |   │   └── login.html
 |   └── index.html
 └── manage.py
+
 ```
 
